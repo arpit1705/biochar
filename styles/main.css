@@ -146,6 +146,19 @@ p {
   font-size: 0.95rem;
 }
 
+.nav .cta {
+  border: 1px solid var(--border);
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  color: var(--accent);
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.nav .cta:hover {
+  background: rgba(109, 227, 164, 0.12);
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -168,25 +181,60 @@ p {
   background: var(--gradient);
 }
 
-.hero-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
-  max-width: 720px;
+.hero .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3.5rem;
+  align-items: center;
 }
 
 .hero h1 {
   font-size: clamp(2.7rem, 5vw, 3.8rem);
+  margin-bottom: 1.5rem;
 }
 
 .hero .subtitle {
-  font-size: 1.1rem;
+  margin-bottom: 2.25rem;
 }
 
-.hero .btn {
-  align-self: flex-start;
+.hero-card {
+  padding: 2.5rem;
+  border-radius: 32px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 45px 60px rgba(6, 8, 16, 0.45);
 }
 
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.label {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.hero-note {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.hero-author {
+  color: var(--muted);
+  font-weight: 600;
+}
 
 .mission .split {
   display: grid;
